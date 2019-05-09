@@ -1,0 +1,39 @@
+- NVM
+Node Version Manager
+
+Let's you switch Node versions quickly and easily
+
+- Installing various versions:
+nvm install 8.6.* or nvm install 9.*
+
+- Switch between them
+nvm use 8.6.*
+
+
+
+- NPM
+Node Package Manger
+
+Let's you install npm packages into your project or globally on your machine. 
+When in doubt checkout the NPM page for the package to see what is recommended. 
+
+- Save to project
+
+npm install --save lodash
+
+  - this installs it in the `node_module` directory and updates the `package.json` file
+    so it's installed as a dependency
+
+- Install globally
+Use this for programs that need to be run from the command line like the Mocha 
+testing suite.
+
+npm install --global mocha
+
+  - now you can run mocha commands from the command line
+
+
+
+- Node -v
+Node versioning is important and you will constantly be asked what version are you using. 
+`node -v` is the quickest way to see that.
