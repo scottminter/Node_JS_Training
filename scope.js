@@ -9,10 +9,17 @@ let func = function () {
 }
 
 func();
-console.log(loc);
-
+// console.log(loc); // throws an error
 
 /* Global */
+// let func2 = function () {
+//   loc2 = 'i am global'; // NEVER DO THIS
+//   console.log(loc2);
+// }
+
+// func2();
+// console.log(loc2);
+
 // let bar = 4;
 // let func2 = function () {
 //   console.log(bar);
