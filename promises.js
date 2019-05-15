@@ -6,7 +6,7 @@ const BProm = require('bluebird');
 function func1() {
   return new BProm((resolve, reject) => {
     // try uncommenting this and seeing what happens
-    // return reject('Function 1 failed');
+    return reject('Function 1 failed');
 
     setTimeout(() => {
       resolve('Function 1 finished');
@@ -27,14 +27,6 @@ function func2() {
 
 
 
-
-
-
-
-// This calls the first function and console logs
-// what is returned in the resolve call. Unless you
-// uncomment the reject line, then it goes to the
-// catch
 func1().then((resp1) => {
   console.log(resp1);
 })
@@ -42,8 +34,7 @@ func1().then((resp1) => {
   console.error('Error: ', err);
 });
 
-// This calls the second function and console logs
-// what is returned in the resolve call.
+
 func2().then((resp2) => {
   console.log(resp2);
 })

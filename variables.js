@@ -2,45 +2,98 @@
  * Const vs Let vs Var
  * Var is function scoped
  * Let is block scoped
+ * 
+ * https://medium.com/@josephcardillo/the-difference-between-function-and-block-scope-in-javascript-4296b2322abe
  */
-// calling x after definition 
-var x = 5;
-console.log(x);
+'use strict';
+/**
+ * Const
+ * It can't be reassigned
+ * But can be added to
+ */
 
-// calling y after definition  
-let y = 10;
-console.log(y);
+const myConst = 'My Const';
+console.log(myConst);
 
-// calling var z before definition will return undefined 
-console.log(z);
-var z = 2;
+// you can add to objects
+// const myObj = {
+//   name: 'Scott',
+//   age: 25
+// };
 
-// calling let a before definition will give error 
-console.log(a);
-let a = 3;
+// you can even override values in the object
+// myObj.title = 'developer';
+// console.log(myObj);
 
-// using let is best practice for Node version 6^
-// this is also a good reason to declare all variables at the top of a function
-function foobar () {
-  let a = 1,
-    b = 2,
-    c = 3;
+// you cannot reassign the variable though
+// myObj = {};
 
-    return a + b + c;
-}
 
-console.log(foobar());
- 
+
+
+
 
 
 
 /**
- * Const
- * It can't be reassigned
+ * Var
+ * It's function scoped
+ * Use this if using anything < Node 6
  */
-const myConst = 'some value';
-console.log(myConst);
 
-myConst = 'a new value';
-console.log(myConst);
+// var x = 5;
+// console.log(x);
 
+// x = 'look at my variable';
+// console.log(x);
+
+// x = null;
+// console.log(x);
+
+// x = {
+//   name: 'Scott'
+// };
+// console.log(x);
+
+
+
+
+
+
+
+/**
+ * Let
+ * It's block scoped
+ * Use this for Node 6+
+ */
+// let y = 10;
+// console.log(y);
+
+// y = 'i reassigned my variable';
+// console.log(y);
+
+// y = {
+//   name: 'Not Scott'
+// };
+// console.log(y);
+
+
+
+
+/**
+ * What's the difference look like?
+ */
+
+
+// Block scope
+if (1 === 1) {
+  var a = 200;
+  console.log('a: ', a);
+}
+console.log('a: ', a);
+
+if (1 === 1) {
+  let b = 100;
+  console.log('b: ', b);
+}
+console.log(b);

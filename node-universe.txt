@@ -1,4 +1,7 @@
-- NVM
+WELCOME TO THE NODE-IVERSE!!!
+
+
+/***  NVM  ***/
 Node Version Manager
 
 Let's you switch Node versions quickly and easily
@@ -9,10 +12,25 @@ nvm install 8.6.* or nvm install 9.*
 - Switch between them
 nvm use 8.6.*
 
+- See which versions you have installeed
+nvm ls
+
+- To set a specific version as your default
+nvm alias default VERSION_NUMBER
 
 
-- NPM
-Node Package Manger
+
+/***  NODE  ***/
+You use NVM to install the version(s) you want/need
+
+- Node -v
+Node versioning is important and you will constantly be asked what version are you using. 
+`node -v` is the quickest way to see that.
+
+
+
+/***  NPM  ***/
+Node Package Manger - normally gets installed with Node
 
 Let's you install npm packages into your project or globally on your machine. 
 When in doubt checkout the NPM page for the package to see what is recommended. 
@@ -32,8 +50,3 @@ npm install --global mocha
 
   - now you can run mocha commands from the command line
 
-
-
-- Node -v
-Node versioning is important and you will constantly be asked what version are you using. 
-`node -v` is the quickest way to see that.

@@ -1,34 +1,41 @@
 /**
  * Scopes
+ * Local vs Global
  */
 
-/* Local */
+/***  Local  ***/
 let func = function () {
-  let loc = 'i am local';
-  console.log(loc);
+  let var1 = 'i am local';
+  console.log('a: ', var1);
 }
 
 func();
-// console.log(loc); // throws an error
+// console.log(var1); // throws an error
 
-/* Global */
+
+
+/***  Global  ***/
+
+// The WRONG way
 // let func2 = function () {
-//   loc2 = 'i am global'; // NEVER DO THIS
-//   console.log(loc2);
+//   var2 = 'i am global'; // NEVER DO THIS
+//   console.log('b: ', var2);
 // }
-
 // func2();
-// console.log(loc2);
+// console.log('c: ', var2);
 
-// let bar = 4;
-// let func2 = function () {
-//   console.log(bar);
-//   bar = 50;
+
+// // The possibly OK but still probably shouldn't way
+// let func3 = function () {
+//   global.var3 = 'i am also global';
+//   console.log('d: ', var3);
 // }
+// func3();
+// console.log('e: ', var3);
 
-// console.log(bar);
-// func2();
-// console.log(bar);
+
+
+
 
 
 
@@ -38,35 +45,40 @@ func();
  * Child can access the parent scope.
  * Parent cannot access the child scope.
  */
-// let g = 'global';
+// let customer = 'Scott';
 
 // function blender (fruit) {
-//   let b = fruit,
-//     y = 'yogurt';
+//   let flavor = fruit,
+//     mixer = 'yogurt';
 
 //     function blendSmoothie () {
-//       let size = 'lg';
-//       console.log(b + ' and ' + y + ' makes ' + size + ' ' + b + ' swirl');
+//       let size = 'large';
+//       console.log(customer + ' ordered a ' + size + ' ' + flavor + ' and ' + mixer + ' smoothie.');
 //     }
 //     // console.log(size);
 //     blendSmoothie();
 // }
 
 // blender('blueberry');
-// // console.log(size);
+// // console.log(mixer);
+
+
+
+
+
 
 
 /**
  * Precedence
+ * It will use the more locally scoped variable
  */
 
-// var g = 'global';
+// var x = 'outside';
 
 // function go () {
-//   let g = 'local';
-
-//   console.log(g + ' inside go');
+//   let x = 'inside';
+//   console.log('x on the inside: ', x);
 // }
 
 // go();
-// console.log(g + ' outside go');
+// console.log('x on the outside: ', x);
