@@ -12,7 +12,14 @@ let myObj = {
     'one',
     'two',
     'three'
-  ]
+  ],
+  d: {
+    d1: 'd1',
+    d2: function () {
+      console.log('this is d2 function');
+    }
+  }
 };
 
 console.log(myObj);
+myObj.d.d2();

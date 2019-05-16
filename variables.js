@@ -5,7 +5,7 @@
  * 
  * https://medium.com/@josephcardillo/the-difference-between-function-and-block-scope-in-javascript-4296b2322abe
  */
-'use strict';
+
 /**
  * Const
  * It can't be reassigned
@@ -15,21 +15,7 @@
 const myConst = 'My Const';
 console.log(myConst);
 
-// you can add to objects
-// const myObj = {
-//   name: 'Scott',
-//   age: 25
-// };
-
-// you can even override values in the object
-// myObj.title = 'developer';
-// console.log(myObj);
-
-// you cannot reassign the variable though
-// myObj = {};
-
-
-
+// myConst = 15;  // throws an error
 
 
 
@@ -86,14 +72,14 @@ console.log(myConst);
 
 
 // Block scope
-if (1 === 1) {
-  var a = 200;
-  console.log('a: ', a);
-}
-console.log('a: ', a);
+// if (1 === 1) {
+//   var a = 200;
+//   console.log('a: ', a);
+// }
+// console.log('a: ', a);
 
-if (1 === 1) {
-  let b = 100;
-  console.log('b: ', b);
-}
-console.log(b);
+// if (1 === 1) {
+//   let b = 100;
+//   console.log('b: ', b);
+// }
+// console.log(b);

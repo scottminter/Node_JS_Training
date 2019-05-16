@@ -4,12 +4,11 @@
  */
 
 /***  Local  ***/
-let func = function () {
-  let var1 = 'i am local';
-  console.log('a: ', var1);
-}
-
-func();
+// let func = function () {
+//   let var1 = 'i am local';
+//   console.log('a: ', var1);
+// }
+// func();
 // console.log(var1); // throws an error
 
 
@@ -17,21 +16,21 @@ func();
 /***  Global  ***/
 
 // The WRONG way
-// let func2 = function () {
-//   var2 = 'i am global'; // NEVER DO THIS
-//   console.log('b: ', var2);
+// function func2 () {
+//   badGlobal = 'i am BAD global'; // NEVER DO THIS
+//   console.log('b: ', badGlobal);
 // }
 // func2();
-// console.log('c: ', var2);
+// console.log('c: ', badGlobal);
 
 
-// // The possibly OK but still probably shouldn't way
+// The possibly OK but still probably shouldn't way
 // let func3 = function () {
-//   global.var3 = 'i am also global';
-//   console.log('d: ', var3);
+//   global.betterGlobal = 'i am better global';
+//   console.log('d: ', betterGlobal);
 // }
 // func3();
-// console.log('e: ', var3);
+// console.log('e: ', betterGlobal);
 
 
 
@@ -60,7 +59,7 @@ func();
 // }
 
 // blender('blueberry');
-// // console.log(mixer);
+// console.log(mixer);
 
 
 
@@ -73,7 +72,7 @@ func();
  * It will use the more locally scoped variable
  */
 
-// var x = 'outside';
+// let x = 'outside';
 
 // function go () {
 //   let x = 'inside';

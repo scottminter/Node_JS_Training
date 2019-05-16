@@ -3,8 +3,10 @@
  */
 // require('./ex1');
 
+
+
 /**
- * Node gives us the export command
+ * Node gives us the export function
  * allowing us to save what is exported as a variable
  * - you can export functions
  * - you can export objects
@@ -14,8 +16,12 @@
 // console.log(doSomething);
 // doSomething('blueberry', 'oatmeal');
 
+
+
 // let myObj = require('./ex3.js');
 // console.log(myObj);
+
+
 
 let anotherObj = require('./ex4');
 console.log(anotherObj);
