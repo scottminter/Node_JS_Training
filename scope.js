@@ -34,8 +34,26 @@
 
 
 
+// function MyFakeClass () {
+//   let a = 1;
+//   let b = 2;
+  
+//   let getA = function () {
+//     return a;
+//   }
+  
+//   let getB = function () {
+//     return b;
+//   }
+  
+//   return {
+//     getA: getA,
+//     getB: getB
+//   }
+// }
 
-
+// let mfc = new MyFakeClass();
+// mfc.getA();
 
 
 /**
@@ -72,12 +90,21 @@
  * It will use the more locally scoped variable
  */
 
-// let x = 'outside';
+let x = 'outside';
 
-// function go () {
-//   let x = 'inside';
-//   console.log('x on the inside: ', x);
-// }
+function go () {
+  let x = 'inside';
+  console.log('x on the inside: ', x);
+}
 
-// go();
-// console.log('x on the outside: ', x);
+go();
+console.log('x on the outside: ', x);
+
+
+let a = null;
+
+function setA (inA) {
+  a = inA;
+}
+setA('i just set a');
+console.log(a);

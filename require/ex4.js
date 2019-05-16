@@ -2,8 +2,9 @@ let anotherObj = {};
 
 anotherObj.data = 'some data';
 
-anotherObj.func1 = function () {
+module.exports = function () {
   console.log('this is func 1');
+  this.foo;
 };
 
 anotherObj.func2 = function () {
@@ -11,3 +12,18 @@ anotherObj.func2 = function () {
 };
 
 module.exports = anotherObj;
+
+
+let obj = {};
+
+obj.foo = 'blha';
+obj.func1 = require('./func1');
+obj.func2 = require('./func2');
+
+module.export = obj;
+
+
+// this in another file
+
+let myObj = require('./someMod');
+myObj.func1();

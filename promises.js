@@ -6,11 +6,11 @@ const BProm = require('bluebird');
 function func1() {
   return new BProm(function (resolve, reject) {
     // try uncommenting this and seeing what happens
-    return reject('Function 1 failed');
+    // return reject('Function 1 failed');
 
     setTimeout(function () {
       resolve('Function 1 finished');
-    }, 500); // try changing this number and see what happens
+    }, 100); // try changing this number and see what happens
   });
 }
 
@@ -27,36 +27,46 @@ function func2() {
 
 
 
-func1().then(function (resp1) {
-  console.log(resp1);
-})
-.catch(function (err) {
-  console.error('Error: ', err);
-});
+// func1().then(function (resp1) {
+//   console.log(resp1);
+// })
+// .catch(function (err) {
+//   console.error('Error: ', err);
+// });
 
 
-func2().then(function (resp2) {
-  console.log(resp2);
-})
-.catch(function (err) {
-  console.error('Error: ', err);
-});
+// func2().then(function (resp2) {
+//   console.log(resp2);
+// })
+// .catch(function (err) {
+//   console.error('Error: ', err);
+// });
 
 
 
 /**
  * Promise Chaining
  */
-// func1()
-//   .then(function (resp1) {
-//     console.log(resp1);
-  
-//     return func2();
-//   })
-//   .then(function (resp2) {
-//     console.log(resp2);
-//   })
-//   .catch(function (err) {
-//     console.error(err);
-//   });
+function blah () {
+  return new BProm(function(resolve, reject) {
+    func1()
+    .then(function (resp1) {
+        console.log(resp1);
 
+        return func2();
+      })
+        .then(function (resp2) {
+          resolve(resp2;
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+  });
+}
+
+blah().then(function (data) {
+  // process
+})
+.catch(function (err) {
+  // handle error
+})

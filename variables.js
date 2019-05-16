@@ -12,8 +12,8 @@
  * But can be added to
  */
 
-const myConst = 'My Const';
-console.log(myConst);
+// const myConst = 'My Const';
+// console.log(myConst);
 
 // myConst = 15;  // throws an error
 
@@ -27,19 +27,19 @@ console.log(myConst);
  * Use this if using anything < Node 6
  */
 
-// var x = 5;
-// console.log(x);
+var x = 5;
+console.log(x);
 
-// x = 'look at my variable';
-// console.log(x);
+x = 'look at my variable';
+console.log(x);
 
-// x = null;
-// console.log(x);
+x = null;
+console.log(x);
 
-// x = {
-//   name: 'Scott'
-// };
-// console.log(x);
+x = {
+  name: 'Scott'
+};
+console.log(x);
 
 
 
@@ -52,16 +52,16 @@ console.log(myConst);
  * It's block scoped
  * Use this for Node 6+
  */
-// let y = 10;
-// console.log(y);
+let y = 10;
+console.log(y);
 
-// y = 'i reassigned my variable';
-// console.log(y);
+y = 'i reassigned my variable';
+console.log(y);
 
-// y = {
-//   name: 'Not Scott'
-// };
-// console.log(y);
+y = {
+  name: 'Not Scott'
+};
+console.log(y);
 
 
 

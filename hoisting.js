@@ -1,12 +1,13 @@
 /* In ES5 */
-console.log('A: ', hoist); // output: undefined
-var hoist = 'The variable to be hoisted.';
+// console.log('A: ', hoist); // output: undefined
+// var hoist = 'The variable to be hoisted.';
+
+
 
 // // what javascript is doing
 // var hoist2;
 // console.log('B: ', hoist2);
 // hoist2 = 'The variable to be hoisted.';
-
 
 
 // Same thing with function scoped variables
@@ -16,13 +17,19 @@ var hoist = 'The variable to be hoisted.';
 // }
 // doSomething();
 
-// // // What JS is doing
+// // What JS is doing
 // function doSomething2 () {
 //   var fnHoist;
 //   console.log('D: ', fnHoist);
 //   fnHoist = 'The variable in a function to be hoisted';
 // }
 // doSomething2();
+
+
+// doSomething3();
+// var doSomething3 = function () {
+//   console.log('do something 3');
+// }
 
 
 
